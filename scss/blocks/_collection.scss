@@ -1,0 +1,60 @@
+.collection {
+    padding: 80px 0;
+    width: 100%;
+    .collection_items {
+        width: 100%;
+        .collection_title {
+            @include title-style;
+        }
+        .collection_subtitle {
+            @include subtitle-style;
+            margin-top: 10px;
+        }
+        .collection_content {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            .collection_item {
+                .item_img {
+                    width: 100%;
+                    border-radius: 20px;
+                    @include up-animation;
+                }
+                .item_icons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 15px;
+                    img {
+                        border-radius: 20px;
+                        @include up-animation;
+                    }
+                    button {
+                        @include fill-btn-style;
+                        cursor: pointer;
+                        height: 100px;
+                        width: 100px;
+                        font-size: 22px;
+                        font-weight: 700;
+                        font-family: 'Space Mono', monospace;
+                    }
+                }
+                .item_title {
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-top: 15px;
+                }
+                .item_user {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    margin-top: 10px;
+                    .user_name {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

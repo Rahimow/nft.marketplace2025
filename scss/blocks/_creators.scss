@@ -1,0 +1,82 @@
+.creators {
+    width: 100%;
+    padding: 80px 0;
+    .creators_items {
+        width: 100%;
+        .creators_header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            .creators_titles {
+                .creators_title {
+                    @include title-style;
+                }
+                .creators_subtitle {
+                    @include subtitle-style;
+                }
+            }
+            .creators_btn {
+                padding: 19px 50px;
+                @include empty-btn-style;
+            }
+        }
+        .creators_content {
+            width: 100%;
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(3, 240px);
+            gap: 30px 0; // если нет высоты
+            justify-content: space-between;
+            // min-height: 774px;
+            // align-content: space-between; // если есть высота
+            .creators_item {
+                position: relative;
+                background-color: #3b3b3b;
+                border-radius: 20px;
+                padding: 20px;
+                text-align: center;
+                @include up-animation;
+                .item_num {
+                    height: 30px;
+                    width: 30px;
+                    background-color: #2b2b2b;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100%;
+                    color: #858584;
+                    font-family: 'Space Mono', monospace;
+                    position: absolute;
+                    top: 18px;
+                    left: 20px;
+                }
+                .item_text {
+                    margin-top: 20px;
+                    .item_title {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: #fff;
+                    }
+                    .item_info {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 5px;
+                        .info_title {
+                            color: #858584;
+                        }
+                        .info_value {
+                            color: #fff;
+                            font-family: 'Space Mono', monospace;
+                        }
+                    }
+                }
+            }
+        }
+        .creators_btn_small {
+            display: none;
+        }
+    }
+}

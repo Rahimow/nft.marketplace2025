@@ -1,0 +1,44 @@
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 25;
+    background-color: #2b2b2b;
+    .container {
+        max-width: 1320px;
+    }
+    .header_items {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header_menu {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            li {
+                a {
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: #fff;
+                    transition: 0.3s all;
+                    &:hover {
+                        transition: 0.3s all;
+                        color: $main-color;
+                    }
+                }
+                button {
+                    @include fill-btn-style;
+                    padding: 20px 30px;
+                }
+            }
+        }
+        .header_burger {
+            display: none;
+        }
+    }
+}
